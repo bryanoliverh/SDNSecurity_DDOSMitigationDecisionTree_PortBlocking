@@ -1,0 +1,53 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Network Status</h2>
+
+
+<table border="1">
+    <thead>
+     
+        <tr>
+            <!-- <th>Switch ID</th>
+            <th>Status</th> -->
+            <!-- <th>DPID</th> -->
+            <th>Manifacturer</th>
+            <th>Hardware Description</th>
+            <th>Switch Description</th>
+            <th>Switch Serial Number</th>
+            <th>DP Description</th>
+            <th>DPID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- {% for s in status %} -->
+        <!-- {% for rules1 in rules %}  -->
+        <tr>''
+            <td>{{ rules1.mfr_desc }}</td>
+            <td>{{ rules1.hw_desc }}</td>
+            <td>{{ rules1.sw_desc }}</td>
+            <td>{{ rules1.serial_num }}</td>
+            <td>{{ rules1.dp_desc }}</td>   
+        </tr>
+        <!-- {% endfor %} -->
+      
+       
+    </tbody>
+</table>
+{% endblock %}
+
+            <!-- <td>{{ s.switch_id }}</td>
+            <td>{{ s.status }}</td> -->
+            <!-- <td>{{ testwitch.dpid }}</td> -->
+            <!-- <td>{{ rules.1.mfr_desc }}</td>
+            <td>{{ rules.1.hw_desc }}</td>
+            <td>{{ rules.1.sw_desc }}</td>
+            <td>{{ rules.1.serial_num }}</td>
+            <td>{{ rules.1.dp_desc }}</td>     -->
+              <!-- <tr> -->
+        <!-- <form action="/stats/desc/1/" method="GET">
+        </form>
+         </tr> -->
+         <!-- {% endfor %}
+        {% endfor %} -->

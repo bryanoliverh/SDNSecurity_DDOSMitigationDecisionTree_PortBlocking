@@ -1,0 +1,6 @@
+link s1 s7 down
+
+source addh13s5.sh
+sudo ovs-ofctl -O OpenFlow13 add-flow s5 arp,in_port=12,actions=output:1,2,3
+sudo ovs-ofctl -O OpenFlow13 add-flow s5 arp,in_port=1,actions=output:12
+sudo ovs-ofctl -O OpenFlow13 add-flow s5 arp,in_port=2,actions=output:12

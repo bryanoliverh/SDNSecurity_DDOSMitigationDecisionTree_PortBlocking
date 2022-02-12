@@ -1,0 +1,151 @@
+cd D:\UI\skripsi
+D:
+
+env\Scripts\activate
+cd bryanwebsite
+python .\manage.py runserver
+
+python .\manage.py makemigrations
+python .\manage.py migrate
+python .\manage.py runserver
+
+ssh -X mininet@192.168.1.112
+ssh -X ryu@192.168.1.103
+ ssh -X wifi@192.168.168.6       
+
+
+
+sudo mn --controller=remote,ip=192.168.1.108 --topo=linear,4 --switch ovsk,protocols=OpenFlow13
+
+cd bryanfinal
+sudo python threetier9.py
+
+cd app
+ryu-manager simple_switch_13.py  rest_firewall.py ofctl_rest.py      
+
+ryu-manager controller.py  rest_firewall.py ofctl_rest.py     
+
+in folder applayer ryu
+ryu-manager simple_switch_13.py rest_firewall.py
+hping3 -S --flood -V -p 80 170.155.9.185  --rand-source     
+
+source flowsetupsl.sh
+source stpsetup.sh
+
+ovs-ofctl -O OpenFlow13 dump-flows s1
+
+python -m venv env
+
+
+Address already in use:
+ps -fA | grep python
+kill
+
+
+scp -r mininet@192.168.1.116:/home/mininet/bryanfinal/threetier9h1h12_5000packets.csv dataresearch/
+
+scp -r mininet@192.168.1.116:/home/mininet/bryanfinal/threetest.csv dataresearch/
+unsupported version:
+sudo ovs-vsctl set bridge s1 protocols=OpenFlow13
+sudo ovs-vsctl set bridge s2 protocols=OpenFlow13
+sudo ovs-vsctl set bridge s3 protocols=OpenFlow13
+sudo ovs-vsctl set bridge s4 protocols=OpenFlow13
+
+s1 = net.addSwitch('s3', cls=OVSSwitch, mac='00:00:00:00:00:06', protocols='OpenFlow13')
+# =============================
+#          REST API
+# =============================
+#
+#  Note: specify switch and vlan group, as follows.
+#   {switch-id} : 'all' or switchID
+#   {vlan-id}   : 'all' or vlanID
+#
+#
+
+# about Firewall status
+#
+# get status of all firewall switches
+# GET /firewall/module/status
+#
+# set enable the firewall switches
+# PUT /firewall/module/enable/{switch-id}
+#
+# set disable the firewall switches
+# PUT /firewall/module/disable/{switch-id}
+#
+
+# about Firewall logs
+#
+# get log status of all firewall switches
+# GET /firewall/log/status
+#
+# set log enable the firewall switches
+# PUT /firewall/log/enable/{switch-id}
+#
+# set log disable the firewall switches
+# PUT /firewall/log/disable/{switch-id}
+#
+
+# about Firewall rules
+#
+# get rules of the firewall switches
+# * for no vlan
+# GET /firewall/rules/{switch-id}
+#
+# * for specific vlan group
+# GET /firewall/rules/{switch-id}/{vlan-id}
+#
+#
+# set a rule to the firewall switches
+# * for no vlan
+# POST /firewall/rules/{switch-id}
+#
+# * for specific vlan group
+# POST /firewall/rules/{switch-id}/{vlan-id}
+#
+#  request body format:
+#   {"<field1>":"<value1>", "<field2>":"<value2>",...}
+#
+#     <field>  : <value>
+#    "priority": "0 to 65533"
+#    "in_port" : "<int>"
+#    "dl_src"  : "<xx:xx:xx:xx:xx:xx>"
+#    "dl_dst"  : "<xx:xx:xx:xx:xx:xx>"
+#    "dl_type" : "<ARP or IPv4 or IPv6>"
+#    "nw_src"  : "<A.B.C.D/M>"
+#    "nw_dst"  : "<A.B.C.D/M>"
+#    "ipv6_src": "<xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/M>"
+#    "ipv6_dst": "<xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx:xxxx/M>"
+#    "nw_proto": "<TCP or UDP or ICMP or ICMPv6>"
+#    "tp_src"  : "<int>"
+#    "tp_dst"  : "<int>"
+#    "actions" : "<ALLOW or DENY>"
+#
+#   Note: specifying nw_src/nw_dst
+#         without specifying dl-type as "ARP" or "IPv4"
+#         will automatically set dl-type as "IPv4".
+#
+#   Note: specifying ipv6_src/ipv6_dst
+#         without specifying dl-type as "IPv6"
+#         will automatically set dl-type as "IPv6".
+#
+#   Note: When "priority" has not been set up,
+#         "0" is set to "priority".
+#
+#   Note: When "actions" has not been set up,
+#         "ALLOW" is set to "actions".
+#
+#
+# delete a rule of the firewall switches from ruleID
+# * for no vlan
+# DELETE /firewall/rules/{switch-id}
+#
+# * for specific vlan group
+# DELETE /firewall/rules/{switch-id}/{vlan-id}
+#
+#  request body format:
+#   {"<field>":"<value>"}
+#
+#     <field>  : <value>
+#    "rule_id" : "<int>" or "all"
+#
