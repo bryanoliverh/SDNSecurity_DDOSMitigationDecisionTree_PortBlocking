@@ -1,7 +1,6 @@
 # SDNSecurity_DDOSMitigationDecisionTree_PortBlocking
-DDOS Mitigation System based on Ryu SDN Controller with Port Blocking Mechanism
-
-This is a thesis project that creates a DDoS Mitigation System inside the Ryu SDN Controller. The specification is as follows:
+**DDOS Mitigation System based on Ryu SDN Controller with Port Blocking Mechanism**
+**This is a thesis project that creates a DDoS Mitigation System inside the Ryu SDN Controller. The specification is as follows:**
 1. The controller is using the Machine Learning Classification Decision Tree Model.
 2. The machine learning model is being used to train the controller to determine whether a network packet is considered a DDoS attack or not.
 3. The controller then will be able to detect the packet using the detection mechanism and mitigate the attack by doing a port blocking the attacker port.
@@ -10,10 +9,20 @@ This is a thesis project that creates a DDoS Mitigation System inside the Ryu SD
 6. The application layer functions to manually enable/disable ports, create whitelist/blacklist firewall rules, check the packet forwarding, block specific ports from the network devices, check the condition via the monitoring graphs, and so on.
 
 
-Topology Example:
-Three Tier Data Center:
+**Topology Example:**
+
+
+**Three Tier Data Center:**
+
+
+
 <img width="580" alt="image" src="https://user-images.githubusercontent.com/74172600/220833702-12118189-d3c9-4625-9e56-08808c9f6f87.png">
 
 
-Spine Leaf Data Center:
+
+
+**Spine Leaf Data Center:**
+
+
+
 <img width="652" alt="image" src="https://user-images.githubusercontent.com/74172600/220833759-78b071fb-4165-4ce5-af55-6286d72cd7e9.png">
