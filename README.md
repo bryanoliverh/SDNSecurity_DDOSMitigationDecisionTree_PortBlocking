@@ -8,7 +8,10 @@
 5. There is an application layer that was made to keep the monitoring of the eaeachf the node inside https://github.com/bryanoliverh/SDNSecurity_RyuControllerApplicationLayer.
 6. The application layer functions to manually enable/disable ports, create whitelist/blacklist firewall rules, check the packet forwarding, block specific ports from the network devices, check the condition via the monitoring graphs, and so on.
 
+**Simulation**
 
+Normal Traffic detection: https://youtu.be/l3U2RKbh_E4
+Attack Traffic detection: https://youtu.be/wmVMV7yVDJU
 **Topology Example:**
 
 
