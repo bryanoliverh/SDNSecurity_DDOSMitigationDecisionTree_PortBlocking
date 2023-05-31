@@ -30,4 +30,10 @@
 
 
 
-<img width="652" alt="image" src="https://user-images.githubusercontent.com/74172600/220833759-78b071fb-4165-4ce5-af55-6286d72cd7e9.png">
+**Introduction to Ryu and Mininet**
+Please read through these two docs for the introduction to Mininet and Ryu controllers:
+
+- https://ryu.readthedocs.io/en/latest/getting_started.html
+- http://mininet.org/walkthrough/
+
+Ryu also has an API that can be hit from the application firewall that we run. In this case, I am using Django for the website framework. Some of the API functions are very beneficial for network monitoring and configurations. It allows the management of traffic, enabling or disabling a switch, and many more. Please choose the corresponding mininet and Ryu versions that you prefer. You can check this doc for the API functionalities: https://ryu.readthedocs.io/en/latest/app/ofctl_rest.html
