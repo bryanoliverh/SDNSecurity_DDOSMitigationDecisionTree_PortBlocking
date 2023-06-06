@@ -2,7 +2,7 @@
 
 **This is a thesis project that creates a DDoS Mitigation System inside the Ryu SDN Controller. The specification is as follows:**
 1. The controller is using the Machine Learning Classification Decision Tree Model.
-2. Please use the controllerfinal.py for the full capabilities.
+2. Please use the [controllerfinal.py](https://github.com/bryanoliverh/SDNSecurity_DDOSMitigationDecisionTree_PortBlocking/blob/master/controllerfinal.py) for the full capabilities.
 3. The machine learning model is being used to train the controller to determine whether a network packet is considered a DDoS attack or not.
 4. The controller then will be able to detect the packet using the detection mechanism and mitigate the attack by doing a port blocking the attacker port.
 5. The controller has been tested on multiple data center topologies (Three Tier, Leaf-Spine, etc) with the multiple number of nodes selection with most of the switches being used being OpenFlow Switch 1.3.
