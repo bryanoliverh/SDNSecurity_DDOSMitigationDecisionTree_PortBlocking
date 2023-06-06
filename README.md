@@ -1,4 +1,3 @@
-# SDNSecurity_DDOSMitigationDecisionTree_PortBlocking
 **DDOS Mitigation System based on Ryu SDN Controller with Port Blocking Mechanism**
 **This is a thesis project that creates a DDoS Mitigation System inside the Ryu SDN Controller. The specification is as follows:**
 1. The controller is using the Machine Learning Classification Decision Tree Model.
@@ -31,6 +30,7 @@
 
 
 **Introduction to Ryu and Mininet**
+
 Please read through these two docs for the introduction to Mininet and Ryu controllers:
 
 - https://ryu.readthedocs.io/en/latest/getting_started.html
